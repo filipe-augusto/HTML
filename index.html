@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicios HTML</title>
+</head>
+
+<body>
+
+    <HEAD>
+        <h1>Exercicios HMTL</h1>
+    </HEAD>
+    <NAV>
+        <A href wm-nav="exercicios/teste.html">00 - Teste</A>
+    </NAV>
+    <section id="conteudo">
+    </section>
+    <footer>
+        <br>
+        Curso de web moderno
+    </footer>
+    <script>
+        document.querySelectorAll('[wm-nav]').forEach(link =>{
+            //console.log(link)
+            const conuteudo = document.getElementById('conteudo')//obteve o conteudo
+            link.onclick = function(e){
+                e.preventDefault()//previnir o comportamento padrão ocorra             
+                fetch(link.getAttribute('wm-nav'))//chamada ajax apartir do link
+                .then(resp =>resp.text())//pegar o conteudo html
+                .then(html => conteudo.innerHTML = html)
+            }
+        }) //pega todos os links
+    </script>
+</body>
+
+</html>

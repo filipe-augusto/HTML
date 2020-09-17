@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exercicios HTML</title>
     <STYLE>
-        #conteudo{
+        #conteudo {
             padding: 0PX;
         }
     </STYLE>
@@ -19,13 +19,19 @@
     </HEAD>
     <NAV>
         <A href wm-nav="exercicios/teste.html">00 - Teste</A>
-        <A href wm-nav="exercicios/texto1.html">texto 01</A>
-        <A href wm-nav="exercicios/texto2.html">texto 02</A>
+        <A href wm-nav="exercicios/texto1.html">01 - Texto 01</A>
+        <A href wm-nav="exercicios/texto2.html">02 - texto 02</A>
+        <A href wm-nav="exercicios/listas.html">03 - Listas </A>
+        <A href wm-nav="exercicios/listaAlinhada.html">04 - Listas Alinhadas </A>
+        <A href wm-nav="exercicios/listaAlinhadaDesafio.html">05 - Listas Alinhadas Desafio</A>
+        <A href wm-nav="exercicios/links.html">06 - Links</A>
+        <A href wm-nav="exercicios/tabelas.html">07 - Tabelas</A>
+        <A href wm-nav="exercicios/form/form.html">08 - Formulario</A>
     </NAV>
     <section id="conteudo">
     </section>
     <footer>
-      
+
         Curso de web moderno
     </footer>
     <script>
@@ -37,7 +43,7 @@
                 fetch(link.getAttribute('wm-nav'))//chamada ajax a partir do link
                     .then(resp => resp.text())//pegar o conteudo html
                     .then(html => conteudo.innerHTML = html)
-            }
+            }//http-server -c-1
         }) //pega todos os links
     </script>
 </body>
